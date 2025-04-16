@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header role="banner">
+        
+        <a href="https://www.apple.com" target="_blank" aria-label="Ir al sitio oficial de Apple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                <path d="M16.365 1.43c0 1.14-.41 2.007-1.23 2.665-.823.657-1.748 1.023-2.77.986-.043-.14-.064-.28-.064-.422 0-1.08.41-1.982 1.227-2.704.82-.722 1.772-1.077 2.86-1.065.026.18.04.36.04.54zm2.573 15.825c-.455 1.046-1.127 2.038-2.02 2.974-.897.933-1.86 1.402-2.89 1.402-.498 0-1.095-.146-1.79-.437-.697-.29-1.345-.436-1.944-.436-.637 0-1.31.145-2.02.436-.713.291-1.285.437-1.714.437-.978 0-1.936-.456-2.872-1.37-.934-.91-1.646-1.96-2.134-3.153-.643-1.538-.965-3.042-.965-4.508 0-1.613.37-3.015 1.107-4.205.736-1.188 1.718-1.787 2.947-1.797.566 0 1.297.164 2.195.49.893.327 1.465.49 1.715.49.183 0 .838-.186 1.96-.554 1.05-.346 1.938-.49 2.66-.437 2.016.162 3.527.986 4.533 2.47-1.793 1.08-2.683 2.598-2.67 4.553.014 1.517.57 2.766 1.67 3.75.5.467 1.055.832 1.666 1.097-.132.38-.27.738-.417 1.076z"/>
+            </svg>
+        </a>        
+        <nav>    
+            <ul class="menu">
+                <li><a href="#" aria-label="Ir a la tienda de Apple">Store</a></li>
+                <li><a href="#" aria-label="Ir a la página de Mac">Mac</a></li>
+                <li><a href="#" aria-label="Ir a la página de AirPods">AirPods</a></li>
+                <li><a href="#" aria-label="Explora contenido exclusivo de Apple">Only on Apple</a></li>
+                <li><a href="#" aria-label="Ir a Soporte de Apple">Support</a></li>
+            </ul>
+        </nav>
+        <section class="search-box">
+            <a href="#" aria-label="Buscar">
+                <i class="fas fa-search" title="Buscar"></i>
+            </a>
+            <a href="#" aria-label="Carrito de compras">
+                <i class="fas fa-shopping-bag" title="Carrito de compras"></i>
+            </a>
+        </section>
+    </header>
+    <main role="main">
+        <section id="hero">
+            <h1>The New MacBook Pro 14</h1>
+            <p id="description">Enjoy pure picture quality with mini-LED technology</p>
+            <div class="botones">
+                <button class="button-buy" >Buy</button>
+                <button class="button-learn-more" >Learn more</button>
+            </div>
+            <img id="MacBook" src="./img/MacBook.jpeg" alt="MacBook Pro 14">
+        </section>
+
+        <section class="caracteristicas">
+            <h2>Características del Producto</h2>
+            <ul id="lista-de-caracteristicas">
+                <li>
+                    <h3>Pantalla Retina</h3>
+                    <p>Una resolución impresionante para una experiencia visual única.</p>
+                    <img src="./img/pantalla-retina.jpg" alt="Pantalla Retina MacBook Pro 14" width="150px" height="150px">
+                </li>
+                <li>
+                    <h3>Chip M1 Pro</h3>
+                    <p>Rendimiento increíble para tareas profesionales y multitarea.</p>
+                    <img src="./img/chip-m1.jpg" alt="Chip M1 Pro del MacBook Pro 14" width="150px" height="150px">
+                </li>
+                <li>
+                    <h3>Teclado Magic Keyboard</h3>
+                    <p>Comodidad de escritura con teclas de bajo perfil y retroiluminadas.</p>
+                    <img src="./img/teclado-magic.jpg" alt="Teclado Magic Keyboard del MacBook Pro 14" width="180px" height="120px">
+                </li>
+            </ul>
+        </section>
+
+        <section class="galaxi">
+            <div id="envio">
+                <h2>Opciones de Envío</h2>
+                <ul id="lista-de-envios">
+                    <li><strong>Zonas de cobertura:</strong> Estados Unidos, Canadá, Europa, Latinoamérica</li>
+                    <li><strong>Tipos de envío:</strong>
+                        <ul id="tipos-de-envio">
+                            <li>Envío estándar: $5</li>
+                            <li>Envío exprés: $20</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        
+            <div id="pago">
+                <h2>Opciones de Pago</h2>
+                <ul id="lista-de-pagos">
+                    <li><strong>Métodos de pago:</strong> Visa, MasterCard, PayPal, Apple Pay</li>
+                    <li><strong>Promociones:</strong> 10% de descuento en tu primera compra</li>
+                </ul>
+            </div>
+        </section>          
+    </main>
+    <footer role="contentinfo" class="site-footer">
+        <div class="footer-container">
+          <!-- Contacto -->
+          <div class="footer-section contacto">
+            <h4>Contacto</h4>
+            <p>Email: <a href="mailto:soporte@empresa.com">soporte@empresa.com</a></p>
+            <p>Teléfono: <a href="tel:+1234567890">+1 (234) 567‑890</a></p>
+            <p>Horarios: L‑V 9:00 – 18:00</p>
+          </div>
+      
+          <!-- Enlaces importantes -->
+          <div class="footer-section links">
+            <h4>Enlaces</h4>
+            <ul>
+              <li><a href="/terminos-y-condiciones.html">Términos y condiciones</a></li>
+            </ul>
+          </div>
+      
+          <!-- Redes sociales -->
+          <div class="footer-section social">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+              <a href="https://facebook.com/tuempresa" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/tuempresa" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com/tuempresa" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <small class="copyright">© 2025 Tu Empresa. Todos los derechos reservados.</small>
+      </footer>
+</body>
+</html>
