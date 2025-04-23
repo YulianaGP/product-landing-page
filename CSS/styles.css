@@ -8,18 +8,22 @@ body {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
     background-color: black;
+    color: white;
+    overflow-x: hidden; /*oculta el desbordamientto horizontal, evitando una barra de desplazamiento horizontal*/
 }
 
 header{
     padding: 10px;
     display: flex;
+    flex-wrap: wrap; /*permite que los elementos dentro de un contenedor flexbox pasen a la siguiente línea cuando no hay suficiente espacio en la actual.*/
     align-items: center;
     justify-content: space-between;
-    color: white
+    gap: 20px;
 }
 
 .menu {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     list-style: none;
 }
@@ -54,6 +58,9 @@ main{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 #hero{
@@ -61,9 +68,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    text-align: center;
     min-height: 100vh; /*Para que esta caja ocupada la pantalla completa*/
-    
 }
 
 h1{
@@ -75,7 +81,6 @@ h1{
 
 #description{
     width: 60%;
-    text-align: center;
     font-size: 18px;
     color: #ccc;
     margin-bottom: 30px;
@@ -113,21 +118,21 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0px 40px 40px 40px;
+    padding: 0 40px 40px;
 }
 
 .caracteristicas h2{
-    color: white;
     margin-bottom: 40px;
     font-size: 38px;
 }
 
 #lista-de-caracteristicas {
-    color: #ccc;
     display: flex;
-    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
+    list-style: none;    
+    color: #ccc;
 }
 
 #lista-de-caracteristicas h3{
@@ -142,54 +147,82 @@ h1{
 
 #lista-de-caracteristicas img{
     display:block;
-    margin: 0 auto; /*centrar la imagen*/
-    
+    margin: 0 auto; /*centrar la imagen*/  
 }
 
 .galaxi{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    color: #ccc;
-    padding: 20px;
     gap: 20px;
-    padding: 40px 40px 20px 40px;
+    padding: 40px;
+    color: #ccc;
 }
 
 #envio, #pago {
     flex: 1; /*Ambas cajas ocupan el mismo tamaño*/
+    min-width: 280px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
     border: 1px solid gray;
     padding: 15px;
 }
 
 .galaxi h2{
+    font-size: 32px;
+    margin-bottom: 20px;
     color: white;
-    font-size: 35px;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 #lista-de-envios, #tipos-de-envio, #lista-de-pagos{
     list-style: none;
 }
 
-#lista-de-envios li {
+#lista-de-envios li, #lista-de-pagos li {
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
-#lista-de-pagos li{
-    margin-bottom: 10px;
-    line-height: 1.6;
+/* Galería */
+.galeria {
+    padding: 40px;
+    text-align: center;
+    background-color: #111; /* opcional para destacar la sección */
 }
 
-#envio, #pago{
-    background-color: #1e1e1e;
+.galeria h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.galeria-grid img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
 }
 
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
 .site-footer{
     max-width: 1200px;
     margin: 0 auto; /*centrar el footer*/
+    padding: 40px 20px;
     color: #f0f0f0;
 }
 
@@ -235,3 +268,55 @@ h1{
     color: #888;
     padding-bottom: 50px;
 }
+
+/*Media Queries*/
+@media (max-width: 768px) {
+    #description {
+      width: 90%;
+    }
+  
+    .menu {
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .botones {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .grid-galeria img {
+      width: 100%;
+      max-width: 280px;
+    }
+  
+    .galaxi {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #envio, #pago {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search-box {
+      justify-content: center;
+    }
+  
+    .grid-galeria {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
