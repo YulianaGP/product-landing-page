@@ -58,3 +58,35 @@ En el documento HTML que construí, apliqué una estructura semántica clara y c
 ---
 
 ✅ Documento creado por [YulianaGP] para el proyecto de la página tipo Apple.
+
+## Historias de usuario
+
+### Ocultar el menu
+
+Como usuario visualizando desde celular, deseo ver un icono donde muestre las opciones del menu, teniendo en cuenta que es una parte importante dentro de la pagina web.
+
+### Página de testimonios
+
+Como usuario, deseo ver una página aparte de testimonios organizada en una grilla con una barra superior (navbar) y un sidebar de filtros, para poder navegar y filtrar los comentarios fácilmente.
+
+- Barra superior fija (o anclada) en la parte superior de la página.
+- Sidebar a la izquierda en pantallas grandes y reacomodado debajo del navbar en pantallas pequeñas.
+- Sección central que muestre los testimonios de forma clara (tarjetas o lista).
+- El DOM debe mantener una estructura semántica (nav, aside, main).
+
+### Página de compra
+
+Como cliente, necesito acceder a una página de compra que incluya un layout con navbar y sidebar, para conocer los detalles del producto y finalizar mi adquisición de manera intuitiva
+
+- Navbar en la parte superior para la navegación general.
+- Sidebar con opciones o pasos de compra (e.g., selección de variantes, cálculo de envío, métodos de pago), aunque no sean funcionales aún.
+- Sección principal para mostrar el resumen del producto y un formulario o botón para completar la compra (simulado).
+- Responsividad: en pantallas pequeñas, el sidebar se reubica para no dificultar la visualización principal.
+
+### Galeria de imágenes del producto
+
+Como usuario, quiero ver una sección llamada ‘Galería de Imágenes’ con fotos del producto dispuestas en una cuadrícula flexible
+
+### Layout Responsivo en Todas las Páginas
+
+Como usuario que navega desde un teléfono, quiero que todas las páginas del sitio se adapten al ancho de mi dispositivo, evitando el scroll horizontal y manteniendo la accesibilidad.
