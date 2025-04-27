@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondo: '#1D1D1F',
+            tarjeta: '#2C2C2E',
+            azulApple: '#0A84FF'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-fondo text-white font-sans min-h-screen">
+
+  <nav class="bg-fondo text-white p-4 sticky top-0 z-10 shadow">
+    <h1 class="text-2xl font-bold">Testimonios</h1>
+  </nav>
+
+  <div class="grid grid-cols-1 md:grid-cols-[250px_1fr] min-h-screen">
+    <aside class="bg-tarjeta p-6 shadow-md">
+      <h2 class="text-xl font-semibold mb-4">Filtros</h2>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-azulApple hover:underline">Más recientes</a></li>
+        <li><a href="#" class="text-azulApple hover:underline">Más valorados</a></li>
+        <li><a href="#" class="text-azulApple hover:underline">Clientes frecuentes</a></li>
+      </ul>
+    </aside>
+
+    <main class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-tarjeta p-6 rounded-lg shadow-md">
+        <p>“Una atención de primera.”</p>
+        <h4 class="mt-4 font-semibold">- Cliente A</h4>
+      </div>
+      <div class="bg-tarjeta p-6 rounded-lg shadow-md">
+        <p>“Muy satisfecho con el servicio.”</p>
+        <h4 class="mt-4 font-semibold">- Cliente B</h4>
+      </div>
+      <div class="bg-tarjeta p-6 rounded-lg shadow-md">
+        <p>“Recomendado para todos.”</p>
+        <h4 class="mt-4 font-semibold">- Cliente C</h4>
+      </div>
+      <div class="bg-tarjeta p-6 rounded-lg shadow-md">
+        <p>“Productos de alta calidad.”</p>
+        <h4 class="mt-4 font-semibold">- Cliente D</h4>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

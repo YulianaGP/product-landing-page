@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MacBook Pro 14</title>
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,58 +16,138 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
                 <path d="M16.365 1.43c0 1.14-.41 2.007-1.23 2.665-.823.657-1.748 1.023-2.77.986-.043-.14-.064-.28-.064-.422 0-1.08.41-1.982 1.227-2.704.82-.722 1.772-1.077 2.86-1.065.026.18.04.36.04.54zm2.573 15.825c-.455 1.046-1.127 2.038-2.02 2.974-.897.933-1.86 1.402-2.89 1.402-.498 0-1.095-.146-1.79-.437-.697-.29-1.345-.436-1.944-.436-.637 0-1.31.145-2.02.436-.713.291-1.285.437-1.714.437-.978 0-1.936-.456-2.872-1.37-.934-.91-1.646-1.96-2.134-3.153-.643-1.538-.965-3.042-.965-4.508 0-1.613.37-3.015 1.107-4.205.736-1.188 1.718-1.787 2.947-1.797.566 0 1.297.164 2.195.49.893.327 1.465.49 1.715.49.183 0 .838-.186 1.96-.554 1.05-.346 1.938-.49 2.66-.437 2.016.162 3.527.986 4.533 2.47-1.793 1.08-2.683 2.598-2.67 4.553.014 1.517.57 2.766 1.67 3.75.5.467 1.055.832 1.666 1.097-.132.38-.27.738-.417 1.076z"/>
             </svg>
-        </a>        
+        </a> 
+        
+        <!-- Menú de navegación para laptop -->
         <nav>    
-            <ul class="menu">
+            <ul class="menu" id="menu">
                 <li><a href="#" aria-label="Ir a la tienda de Apple">Store</a></li>
                 <li><a href="#" aria-label="Ir a la página de Mac">Mac</a></li>
                 <li><a href="#" aria-label="Ir a la página de AirPods">AirPods</a></li>
                 <li><a href="#" aria-label="Explora contenido exclusivo de Apple">Only on Apple</a></li>
-                <li><a href="#" aria-label="Ir a Soporte de Apple">Support</a></li>
+                <li><a href="./testimonios.html" aria-label="Ir a la pagina de testimonios">Testimonios</a></li>
             </ul>
         </nav>
+        <!-- Iconos búsqueda y carrito -->
         <section class="search-box">
             <a href="#" aria-label="Buscar">
-                <i class="fas fa-search" title="Buscar"></i>
+                <i class="fas fa-search" aria-label="Buscar"></i>
             </a>
             <a href="#" aria-label="Carrito de compras">
-                <i class="fas fa-shopping-bag" title="Carrito de compras"></i>
+                <i class="fas fa-shopping-bag" aria-label="Carrito de compras"></i>
             </a>
+            <!-- Ícono de menú para móviles -->
+            <div class="menu-icon" id="menu-icon">☰</div>
         </section>
+
+        
     </header>
     <main role="main">
+        <!-- Hero principal -->
         <section id="hero">
             <h1>The New MacBook Pro 14</h1>
             <p id="description">Enjoy pure picture quality with mini-LED technology</p>
             <div class="botones">
-                <button class="button-buy" >Buy</button>
-                <button class="button-learn-more" >Learn more</button>
+                <button class="button-buy">Buy</button>
+                <button class="button-learn-more">Learn more</button>
             </div>
             <img id="MacBook" src="./img/MacBook.jpeg" alt="MacBook Pro 14">
         </section>
-
+        
+        <!-- Sección Características -->
         <section class="caracteristicas">
-            <h2>Características del Producto</h2>
-            <ul id="lista-de-caracteristicas">
-                <li>
-                    <h3>Pantalla Retina</h3>
-                    <p>Una resolución impresionante para una experiencia visual única.</p>
-                    <img src="./img/pantalla-retina.jpg" alt="Pantalla Retina MacBook Pro 14" width="150px" height="150px">
-                </li>
-                <li>
-                    <h3>Chip M1 Pro</h3>
-                    <p>Rendimiento increíble para tareas profesionales y multitarea.</p>
-                    <img src="./img/chip-m1.jpg" alt="Chip M1 Pro del MacBook Pro 14" width="150px" height="150px">
-                </li>
-                <li>
-                    <h3>Teclado Magic Keyboard</h3>
-                    <p>Comodidad de escritura con teclas de bajo perfil y retroiluminadas.</p>
-                    <img src="./img/teclado-magic.jpg" alt="Teclado Magic Keyboard del MacBook Pro 14" width="180px" height="120px">
-                </li>
-            </ul>
+            <!-- Características: Chip -->
+            <div class="caracteristica chip">
+                <div>
+                    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background: #000; border-radius: 15px; padding: 10px;">
+                        <rect x="10" y="10" width="80" height="80" rx="15" ry="15" fill="#1d1d1f" stroke="#ffffff" stroke-width="2" />
+                        <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-size="32" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold" dy=".3em">M4</text>
+                    </svg>
+                    <h3>Chip M4</h3>
+                </div>
+                <div>
+                    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background: #000; border-radius: 15px; padding: 10px;">
+                        <rect x="10" y="10" width="80" height="80" rx="15" ry="15" fill="#1d1d1f" stroke="#ffffff" stroke-width="2" />
+                        <text x="50%" y="45%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">M4</text>
+                        <text x="50%" y="70%" text-anchor="middle" fill="#ffffff" font-size="16" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">Pro</text>
+                    </svg>
+                    <h3>Chip M4 Pro</h3>
+                </div>
+                <div>
+                    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background: #000; border-radius: 15px; padding: 10px;">
+                        <rect x="10" y="10" width="80" height="80" rx="15" ry="15" fill="#1d1d1f" stroke="#ffffff" stroke-width="2" />
+                        <text x="50%" y="45%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">M4</text>
+                        <text x="50%" y="70%" text-anchor="middle" fill="#ffffff" font-size="16" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">Max</text>
+                    </svg>
+                    <h3>Chip M4 Max</h3>
+                </div>
+            </div>
+            
+            <div class="caracteristica memoria">
+                <h3>Memoria</h3>
+                
+                <div>
+                    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background: #000; border-radius: 15px; padding: 10px;">
+                        <rect x="10" y="10" width="80" height="80" rx="15" ry="15" fill="#1d1d1f" stroke="#ffffff" stroke-width="2" />
+                        <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-size="32" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold" dy=".3em">M4</text>
+                    </svg>
+                    <ul>
+                        <li>Tiene capacidad máx. de 8 GB, 16GB, 24GB, 32GB</li>
+                        <li>Tiene un ancho de banda max. 120 GB/s</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background: #000; border-radius: 15px; padding: 10px;">
+                        <rect x="10" y="10" width="80" height="80" rx="15" ry="15" fill="#1d1d1f" stroke="#ffffff" stroke-width="2" />
+                        <text x="50%" y="45%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">M4</text>
+                        <text x="50%" y="70%" text-anchor="middle" fill="#ffffff" font-size="16" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">Pro</text>
+                    </svg>
+                    <ul>
+                        <li>Tiene capacidad max. de 24 GB, 48 GB, 64 GB</li>
+                        <li>Tiene un ancho de banda max. 273 GB/s</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background: #000; border-radius: 15px; padding: 10px;">
+                        <rect x="10" y="10" width="80" height="80" rx="15" ry="15" fill="#1d1d1f" stroke="#ffffff" stroke-width="2" />
+                        <text x="50%" y="45%" text-anchor="middle" fill="#ffffff" font-size="28" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">M4</text>
+                        <text x="50%" y="70%" text-anchor="middle" fill="#ffffff" font-size="16" font-family="SF Pro, Helvetica, Arial, sans-serif" font-weight="bold">Max</text>
+                    </svg>
+                    <ul>
+                        <li>Tiene capacidad maxima de 36 GB, 48 GB, 64 GB, 128 GB</li>
+                        <li>Tiene un ancho de banda max. 410 GB/s (con CPU de 14 nucleos)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="caracteristica titulo">
+                <h2>Características MacBook Pro 14"</h2>
+            </div>
+            <div class="caracteristica bateria">
+                <h3>Batería</h3>
+                <p>Li-ion</p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="#000000">
+                    <rect x="20" y="20" width="60" height="50" rx="10" ry="10" fill="#4CAF50" stroke="#ffffff" stroke-width="2" />
+                    <rect x="40" y="10" width="20" height="10" rx="5" ry="5" fill="#4CAF50" stroke="#ffffff" stroke-width="2" />
+                    <rect x="25" y="30" width="50" height="30" fill="white" stroke="#ffffff" stroke-width="2" />
+                    <rect x="30" y="35" width="40" height="20" fill="#4CAF50" stroke="#ffffff" stroke-width="2" />
+                    <text x="50%" y="50%" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Arial" font-weight="bold" dy=".3em">3561mAh</text>
+                </svg>
+            </div>
+            <div class="caracteristica pantalla">
+                <h3>Pantalla</h3>
+                <p>Liquid Retina XDR</p>
+                <svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                    <path d="M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    <text x="12" y="14" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="sans-serif" fill="currentColor">a</text>
+                </svg>
+            </div>
         </section>
 
-        <section class="galaxi">
+        <!-- Sección de envios y pago -->
+        <section class="finalizar-compra">
             <div id="envio">
                 <h2>Opciones de Envío</h2>
                 <ul id="lista-de-envios">
@@ -81,7 +161,7 @@
                 </ul>
             </div>
             <div id="pago">
-                <h2>Opciones de Pago</h2>
+                <h2><a href="./compra.html">Opciones de Pago</a></h2>
                 <ul id="lista-de-pagos">
                     <li><strong>Métodos de pago:</strong> Visa, MasterCard, PayPal, Apple Pay</li>
                     <li><strong>Promociones:</strong> 10% de descuento en tu primera compra</li>
@@ -89,7 +169,7 @@
             </div>
         </section>
         
-        <section class="galeria">
+        <section class="productos">
             <h2>Galería de Imágenes</h2>
             <div class="galeria-grid">
                 <img src="./img/mac.png" alt="Mac">
@@ -136,6 +216,8 @@
           </div>
         </div>
         <small class="copyright">© 2025 Tu Empresa. Todos los derechos reservados.</small>
-      </footer>
+    </footer>
+
+    <script src="./JS/index.js"></script>
 </body>
 </html>

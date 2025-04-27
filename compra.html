@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Compra</title>
+  <link rel="stylesheet" href="./CSS/compra.css" />
+</head>
+<body>
+
+  <!-- Navbar fijo superior -->
+  <nav class="navbar">
+    <h1>Apple Store</h1>
+  </nav>
+
+  <div class="container">
+    <!-- Sidebar con pasos (simulados) -->
+    <aside class="sidebar">
+      <h2>Pasos de Compra</h2>
+      <ul>
+        <li>✅ Selección de variantes</li>
+        <li>🚚 Cálculo de envío</li>
+        <li>💳 Métodos de pago</li>
+      </ul>
+    </aside>
+
+    <!-- Sección principal con resumen y formulario -->
+    <main class="main">
+      <section class="product-summary">
+        <h2>MacBook Pro M4</h2>
+        <p>Pantalla Retina XDR, 14 pulgadas, 256GB SSD, 8GB RAM</p>
+        <p><strong>Precio:</strong> $1,199 USD</p>
+      </section>
+
+      <section class="purchase-form">
+        <h3>Finalizar Compra</h3>
+        <form>
+          <label>Nombre completo</label><br />
+          <input type="text" required /><br /><br />
+
+          <label>Correo electrónico</label><br />
+          <input type="email" required /><br /><br />
+
+          <label>Dirección de envío</label><br />
+          <input type="text" required /><br /><br />
+
+          <button type="submit">Comprar ahora</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

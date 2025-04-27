@@ -15,7 +15,6 @@ body {
 header{
     padding: 10px;
     display: flex;
-    flex-wrap: wrap; /*permite que los elementos dentro de un contenedor flexbox pasen a la siguiente línea cuando no hay suficiente espacio en la actual.*/
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -23,7 +22,6 @@ header{
 
 .menu {
     display: flex;
-    flex-wrap: wrap;
     gap: 25px;
     list-style: none;
 }
@@ -35,19 +33,74 @@ header{
     transition: color 0.3s;
 }
 
+.menu-icon {
+    display: none; /*Oculto por defecto en pantallas grandes */
+    font-size: 18px; /* Para que tenga el mismo tamaño que el SVG Apple*/
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      z-index: 10px; /*Asegura que esté por encima de otros elementos*/
+    }
+    
+    .menu a {
+        margin: 10px 0;
+      }
+    
+    .menu.show {
+        display: flex;
+      }
+    
+    .menu-icon{
+        display:block /*Visible en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-box {
+    justify-content: center;
+  }
+
+  .grid-galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .menu a:hover{
     color: white;
 }
 
 .search-box{
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
 .search-box i{
     color: white;
     cursor: pointer;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s;    
 }
 
 .search-box i:hover{
@@ -69,7 +122,7 @@ main{
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100vh; /*Para que esta caja ocupada la pantalla completa*/
+    min-height: 100vh; /*Para que esta caja ocupe la pantalla completa*/
 }
 
 h1{
@@ -79,6 +132,7 @@ h1{
     font-size: 48px;
 }
 
+/* Estilos específicos para el párrafo con el ID description */
 #description{
     width: 60%;
     font-size: 18px;
@@ -114,43 +168,247 @@ h1{
     cursor: pointer; 
 }
 
-.caracteristicas{
-    display: flex;
+/*Media Queries hero*/
+@media (max-width: 768px) {
+  #description {
+    width: 90%;
+  }
+
+  .menu {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid-galeria img {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .galaxi {
     flex-direction: column;
     align-items: center;
-    padding: 0 40px 40px;
+  }
+
+  #envio, #pago {
+    width: 100%;
+  }
 }
 
-.caracteristicas h2{
-    margin-bottom: 40px;
-    font-size: 38px;
-}
+/* Media Queries hero para pantallas más pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  #hero {
+    padding: 10px;
+  }
 
-#lista-de-caracteristicas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    list-style: none;    
-    color: #ccc;
-}
+  h1 {
+    font-size: 32px; /* Reducir el tamaño del texto en pantallas pequeñas */
+    margin-bottom: 20px;
+  }
 
-#lista-de-caracteristicas h3{
-    margin-bottom: 10px;
-    font-size: 28px;
-}
-
-#lista-de-caracteristicas p{
+  #description {
+    width: 100%; /* La descripción ocupará el 100% del ancho disponible */
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+
+  .button-buy, .button-learn-more {
+    width: 90%; /* Hacer los botones más grandes en pantallas pequeñas */
+    font-size: 14px;
+  }
+
+  #MacBook {
+    width: 100%; /* La imagen ocupará todo el ancho disponible */
+    max-width: 400px; /* Limitar la imagen a un tamaño máximo adecuado */
+    margin-top: 20px;
+  }
 }
 
-#lista-de-caracteristicas img{
-    display:block;
-    margin: 0 auto; /*centrar la imagen*/  
+
+
+.caracteristicas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Definimos las filas para que tengan una altura mínima y se expandan */
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  margin: 10px;
+  align-items: stretch; /* Estira los items para que tengan la misma altura */
+  height: calc(100vh - 60px); /* La sección ocupa el 90% de la altura de la pantalla y lo compartirá con el header*/
+  overflow-y: auto; /* Si el contenido excede la altura, será desplazable */
 }
 
-.galaxi{
+.caracteristica {
+  background-color: #1e1e1e;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.caracteristica.chip {
+  grid-column: span 2;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.caracteristica.memoria {
+  grid-column: 3;
+  grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los items al inicio (izquierda) */
+}
+
+.caracteristica.memoria > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea los items al inicio (izquierda) */
+  text-align: left;
+  border: 1px solid gray;
+  background: black;
+  font-size: 10px;
+  margin-bottom: 10px;
+  width: 100%; /*Ancho fijo para todas las cajas negras */
+  border-radius: 10px;
+}
+
+.caracteristica.memoria > div > ul {
+  list-style-position: inside; /* La viñeta ul se muestra dentro de la caja */
+  padding-left: 20px; /* Añade un poco de espacio para que el texto no pegue a la viñeta */
+  width: 100%; /* Asegura que la lista ocupe el ancho del div padre */
+}
+
+.caracteristica.memoria > div > ul > li {
+  margin-bottom: 8px; /* Pequeño espacio entre los elementos de la lista */
+  padding-right: 8px; /*Añade un espacio interno de 15px a la derecha*/
+}
+
+.caracteristica.titulo {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.caracteristica img,
+.caracteristica svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caracteristica h3 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.caracteristica p {
+    text-align: center;
+}
+
+/* Media Queries para pantallas de 768px (tabletas) */
+@media (max-width: 768px) {
+  .caracteristicas {
+    grid-template-columns: 1fr; /* Una sola columna para pantallas más pequeñas */
+    gap: 15px;
+    height: auto; /* Deja que el contenedor crezca según el contenido */
+  }
+
+  .caracteristica.chip {
+    grid-column: span 1; /* Chip ocupará solo una columna en pantallas de 768px */
+    flex-direction: column; /* Mantener dirección en columna */
+    gap: 20px;
+  }
+
+  .caracteristica.memoria {
+    grid-column: span 1; /* Memoria ocupará solo una columna */
+    grid-row: auto; /* Ajustar el orden de los elementos */
+  }
+
+  .caracteristica.titulo {
+    font-size: 24px; /* Reducir tamaño de la fuente para títulos */
+  }
+
+  .caracteristica h3 {
+    font-size: 16px; /* Reducir el tamaño de los encabezados */
+  }
+
+  .caracteristica p {
+    font-size: 12px; /* Reducir tamaño de los párrafos */
+  }
+
+  .caracteristica svg {
+    width: 80px; /* Reducir tamaño de los SVGs en pantallas pequeñas */
+    height: 80px;
+  }
+
+  .caracteristica.memoria > div > ul {
+    padding-left: 10px; /* Reducir espacio izquierdo de las listas */
+  }
+}
+
+/* Media Queries para pantallas más pequeñas de aproximadamente 400px (teléfonos pequeños) */
+@media (max-width: 480px) {
+  .caracteristicas {
+    grid-template-columns: 1fr; /* Aún una sola columna para pantallas muy pequeñas */
+    gap: 10px;
+  }
+
+  .caracteristica.chip {
+    grid-column: span 1; /* Los chips ocuparán toda la columna */
+    flex-direction: column; /* Mantener flex en columna */
+    align-items: center; /* Centrar los elementos */
+    gap: 15px;
+  }
+
+  .caracteristica.memoria {
+    grid-column: span 1; /* Ocupa solo una columna */
+    grid-row: auto; /* Asegurar que los elementos se apilen correctamente */
+  }
+
+  .caracteristica.titulo {
+    font-size: 22px; /* Título más pequeño para pantallas pequeñas */
+  }
+
+  .caracteristica h3 {
+    font-size: 14px; /* Tamaño más pequeño para encabezados */
+  }
+
+  .caracteristica p {
+    font-size: 10px; /* Reducir aún más el tamaño de los párrafos */
+  }
+
+  .caracteristica svg {
+    width: 60px; /* Reducir mucho más el tamaño de los íconos */
+    height: 60px;
+  }
+
+  .caracteristica.memoria > div > ul {
+    padding-left: 8px; /* Reducir más el espacio de las listas */
+  }
+}
+
+/*Section de envios y pagos*/
+.finalizar-compra{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -168,7 +426,7 @@ h1{
     padding: 15px;
 }
 
-.galaxi h2{
+.finalizar-compra h2{
     font-size: 32px;
     margin-bottom: 20px;
     color: white;
@@ -183,14 +441,60 @@ h1{
     line-height: 1.6;
 }
 
-/* Galería */
-.galeria {
+/* Media Queries para pantallas de 768px (tabletas) */
+@media (max-width: 768px) {
+  .finalizar-compra {
+    flex-direction: column; /* Coloca los elementos en columna en lugar de fila */
+    padding: 20px; /* Reduce el padding para un diseño más compacto */
+  }
+
+  #envio, #pago {
+    flex: none; /* Remueve la flexibilidad para que los elementos no se estiren */
+    width: 100%; /* Ambos elementos ocuparán el 100% del ancho */
+    margin-bottom: 20px; /* Añade espacio entre las secciones */
+  }
+
+  .finalizar-compra h2 {
+    font-size: 28px; /* Reduce el tamaño de los encabezados */
+  }
+
+  #lista-de-envios li, #lista-de-pagos li {
+    font-size: 14px; /* Reducir el tamaño de la fuente de los items */
+  }
+}
+
+/* Media Queries para pantallas de 468px (teléfonos pequeños) */
+@media (max-width: 468px) {
+  .finalizar-compra {
+    padding: 10px; /* Reduce aún más el padding para adaptarse a pantallas muy pequeñas */
+  }
+
+  #envio, #pago {
+    width: 100%; /* Ambos elementos ocuparán todo el ancho */
+    padding: 10px; /* Menos espacio interno */
+  }
+
+  .finalizar-compra h2 {
+    font-size: 24px; /* Reducción de tamaño en títulos */
+    margin-bottom: 15px; /* Reducir espacio debajo del título */
+  }
+
+  #lista-de-envios li, #lista-de-pagos li {
+    font-size: 12px; /* Reducir tamaño de texto aún más */
+  }
+}
+
+
+
+
+/* Productos */
+.productos {
     padding: 40px;
     text-align: center;
     background-color: #111; /* opcional para destacar la sección */
 }
 
-.galeria h2 {
+.productos h2 {
     font-size: 36px;
     color: white;
     margin-bottom: 20px;
@@ -268,55 +572,3 @@ h1{
     color: #888;
     padding-bottom: 50px;
 }
-
-/*Media Queries*/
-@media (max-width: 768px) {
-    #description {
-      width: 90%;
-    }
-  
-    .menu {
-      justify-content: center;
-      gap: 15px;
-    }
-  
-    .botones {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .grid-galeria img {
-      width: 100%;
-      max-width: 280px;
-    }
-  
-    .galaxi {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #envio, #pago {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .menu {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .search-box {
-      justify-content: center;
-    }
-  
-    .grid-galeria {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
